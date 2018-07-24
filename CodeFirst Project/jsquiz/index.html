@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Vegan Quiz!</title>
+<link href ="style.scss" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src = "main.js"></script>
+
+</head>
+
+
+<body>
+<h1>Vegan Quiz!</h1>
+
+
+<form id = "quiz" name = "quiz">
+
+
+<p class = "questions">1. The pharmaceutical industry sells 80% of all antibiotics made in the US to which industry?</p>
+<input id = "textbox" type = "text" name = "question1">
+
+<p class = "questions">2. Countries with the highest rates of dairy consumption have the higest rates of..? </p>
+
+<input type = "radio" id = "mc" name = "question2" value = "healthy bones"> healthy bones<br>
+<input type = "radio" id = "mc" name = "question2" value = "Osteoporosis"> Osteoporosis<br>
+
+<p class = "questions">3. For women who have had breast cancer, just one serving of dairy a day can increase their chance of dying from the disease 49%, and dying from any disease 64%</p>
+
+<input type = "radio" id = "mc" name = "question3" value = "True"> True<br>
+<input type = "radio" id = "mc" name = "question3" value = "False"> False<br>
+
+<p class = "questions">4. Dairy can increase a man's risk of getting prostate cancer by 34%</p>
+
+<input type = "radio" id = "mc" name = "question4" value = "True"> True<br>
+<input type = "radio" id = "mc" name = "question4" value = "False"> False<br>
+
+<p class = "questions">5. One teaspoon of milk can legally contain up to ho many pus cells?</p>
+
+<input type = "radio" id = "mc" name = "question5" value = "None"> None<br>
+<input type = "radio" id = "mc" name = "question5" value = "500,000"> 500,000<br>
+<input type = "radio" id = "mc" name = "question5" value = "1,000,000"> 1,000,000<br>
+<input type = "radio" id = "mc" name = "question5" value = "2,000,000"> 2,000,000<br>
+
+<p class = "questions">6. What is the leading source of both choloesterol and sodium in the American diet?</p>
+
+<input type = "radio" id = "mc" name = "question6" value = "Chips"> Chips<br>
+<input type = "radio" id = "mc" name = "question6" value = "Chicken"> Chicken<br>
+<input type = "radio" id = "mc" name = "question6" value = "Takeaway"> Takeaway<br>
+<input type = "radio" id = "mc" name = "question6" value = "McDonalds"> McDonalds<br>
+
+<p class = "questions">7. Raising animals for food is the leading cause of..?</p>
+
+<input type = "radio" id = "mc" name = "question7" value = "Rainforest destruction"> Rainforest destruction<br>
+<input type = "radio" id = "mc" name = "question7" value = "Ocean dead zones"> Ocean dead zones<br>
+<input type = "radio" id = "mc" name = "question7" value = "Species extinction"> Species extinction<br>
+<input type = "radio" id = "mc" name = "question7" value = "Fresh Water Consumption"> Fresh Water Consumption<br>
+<input type = "radio" id = "mc" name = "question7" value = "All of the above"> All of the above<br>
+
+<p class = "questions">8. 82% of starving children live in countries where food is grown to feed animals in the west</p>
+
+<input type = "radio" id = "mc" name = "question8" value = "True"> True<br>
+<input type = "radio" id = "mc" name = "question8" value = "False"> False<br>
+
+<p class = "questions">9. Livestock and their byproducts account for what percentage of all worldwide greenhouse gas emissions?</p>
+
+<input type = "radio" id = "mc" name = "question9" value = "11%"> 11%<br>
+<input type = "radio" id = "mc" name = "question9" value = "21%"> 21%<br>
+<input type = "radio" id = "mc" name = "question9" value = "41%"> 41%<br>
+<input type = "radio" id = "mc" name = "question9" value = "51%"> 51%<br>
+
+
+<p class = "questions">10. 1/3 of pigs in the UK are killed using which of these methods?</p>
+
+<input type = "radio" id = "mc" name = "question10" value = "Cuddles"> Cuddles<br>
+<input type = "radio" id = "mc" name = "question10" value = "Gas chamber"> Gas chamber<br>
+<!--
+<p class = "questions">How many chickens per square metre are farmers legally allowed to house?</p>
+
+<input type = "radio" id = "mc" name = "question7" value = "1"> 1<br>
+<input type = "radio" id = "mc" name = "question7" value = "3"> 3<br>
+<input type = "radio" id = "mc" name = "question7" value = "6"> 6<br>
+<input type = "radio" id = "mc" name = "question7" value = "9"> 9<br>
+-->
+<p class = "questions">11. Most pigs are officially entitled to how much space each?</p>
+
+<input type = "radio" id = "mc" name = "question11" value = "More than 1 square metre"> More than 1 square metre<br>
+<input type = "radio" id = "mc" name = "question11" value = "Less than 1 square metre"> Less than 1 square metre<br>
+
+<p class = "questions">12. Calves would naturally feed from their mothers for around 9 months to a year, but dairy calves are taken away from their mothers within how long?</p>
+
+<input type = "radio" id = "mc" name = "question12" value = "6 months"> 6 months<br>
+<input type = "radio" id = "mc" name = "question12" value = "3 months"> 3 months<br>
+<input type = "radio" id = "mc" name = "question12" value = "24 to 72 hours"> 24 to 72 hours<br>
+
+
+<input id = "button" type = "button" value = "I'm finished!" onclick = "check();">
+
+</form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+<img id = "picture">
+</div>
+</html>
+
+</body>
