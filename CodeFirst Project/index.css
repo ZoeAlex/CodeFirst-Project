@@ -1,26 +1,35 @@
+body {
+  text-align: center;
+  background: #003300;
+  color: white;
+  margin: 0 auto;
+}
+
 .fullscreen-video-wrap {
-  position: fixed;
-  left: 50%;
-  margin-left: -350px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+ 
 }
 .home {
   font-family: 'Space Mono', monospace;
   text-align: center;
-  color: White;
-  font-style: cursive;
-  font-size: 6em;
+  color: white;
+  font-style: bold;
+  font-size: 80px;
   position: relative;
   margin: 0 auto;
   z-index: 1;
+  
 }
 a {
   font-family: 'Space Mono', monospace;
-  color: White;
-  font-size: 2em;
+  color: white;
   text-align: center;
   margin: 0 auto;
   text-decoration: none;
   padding: 0 10 0 10;
+  font-size: 60px;
 }
 a:hover {
   transition: all .2s ease-in-out;
@@ -41,34 +50,15 @@ a:visited {
 }
 */
 .overlay {
-  position: fixed;
+  position: center;
   top: 50%;
   left: 50%;
-  margin-top: -100px;
-  margin-left: -300px;
+  margin: 0 auto;
 
 }
 a {
   display: block;
   width: 100%;
-}
-body {
-  background-color: #b8ad32;
-  background: radial-gradient(circle, #b8ad32, #e0f34f, #746e25);
-  -moz-radial-gradient: (circle, #b8ad32, #e0f34f, #746e25);
-  -webkit-radial-gradient: (circle, #b8ad32, #e0f34f, #746e25);
-}
-.first {
-  color: white;
-  font-family: 'Space Mono', monospace;
-  position: relative;
-  margin: 0 80% 0 5%;
-  -webkit-animation-duration: 10s;
- animation-duration: 10s;
- -webkit-animation-fill-mode: both;
- animation-fill-mode: both;
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
 }
 
 @-webkit-keyframes fadeInDown {
