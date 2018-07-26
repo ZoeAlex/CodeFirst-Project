@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  background: #003300;
+  color: white;
+  margin: 0 auto;
+}
+
+img.resize {
+  max-width:30%;
+  max-height:30%;
+}
+
