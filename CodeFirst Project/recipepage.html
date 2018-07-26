@@ -2,11 +2,10 @@
 <html>
 <head>
 <style>
-
 body {
   font-family: avenir, sans-serif;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 900px;
   background-color: #ffffff;
 }
 div {
@@ -15,7 +14,6 @@ div {
   position: relative;
   margin: 40px 0 40px 0;
 }
-
 p {
   color: rgba(255,255,255,1);
   background: rgba(0,0,0,1);
@@ -28,7 +26,6 @@ p {
   bottom: 0;
   margin: 0;
 }
-
 .european {
   background-image: url("https://gbc-cdn-public-media.azureedge.net/img29298.768x512.jpg");
 }
@@ -38,11 +35,9 @@ p {
 .asian {
   background-image: url("https://www.veganricha.com/wp-content/uploads/2018/04/Deconstructed-Summer-Rolls-Bowl-veganricha7927.CR2_.HR_.jpg");
 }
-
 .dish {
   float: right;
 }
-
 h1 {
   font-family: brandon grotesque;
   font-size: 65px;
@@ -50,23 +45,44 @@ h1 {
   margin: 60px 0 0 0;
   color: #000000;
 }
-
 h2 {
   text-align: center;
   margin: 0 0 70px 0;
   color: #696969;
 }
-
 a {
   color: #ffffff;
   font-weight: bold;
 }
-
 </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 
 </head>
 
 <body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>VEGAN<br>VIVERS</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+
+  <a href="recipepage.html" onclick="w3_close()" class="w3-bar-item w3-button">RECIPES</a>
+  <a href="#map" onclick="w3_close()" class="w3-bar-item w3-button">MAP</a>
+  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">QUIZ</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left: 300px">
+
 <h1>Vegan Recipes</h1>
 <h2><em>African, Asian, European</em></h2>
   
@@ -77,12 +93,43 @@ a {
   
 <div class="asian">
 <p>Asian<span class="dish">Deconstructed Vegan Summer Rolls</span><br />
-<small>Crunchy vegan summer rolls deconstructed into a bowl. Served with date sweetened peanut butter dipping sauce. Find it at <a href="https://www.veganricha.com/2018/04/deconstructed-vegan-summer-rolls.html">veganricha.com</a></small></p>
+<small>Crunchy vegan summer rolls deconstructed into a bowl. Served with date sweetened peanut butter dipping sauce. Find it at <a href="https://www.veganricha.com/wp-content/uploads/2018/04/Deconstructed-Summer-Rolls-Bowl-veganricha7927.CR2_.HR_.jpg">veganricha.com</a></small></p>
 </div>
   
 <div class="european">
 <p>European<span class="dish">Pithivier Pie</span><br />
 <small>A classic British pastry pie with a French twist. Made using puff pastry,  mixed seasonal wild mushrooms, chestnuts, shallots, garlic, thyme and silken tofu. Find it at <a href="https://www.greatbritishchefs.com/recipes/vegan-mushroom-chestnut-pithivier-recipe">GreatBritishChefs.com</small></p>
 </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
 </body>
 </html>
